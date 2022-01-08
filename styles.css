@@ -1,0 +1,446 @@
+body {
+    /* box-sizing: border-box; */
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+}
+
+.header {
+    align-items: center;
+    background-color: #804d3b;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header h1 {
+    color: #f9f5ce;
+    font-size: 2rem;
+    margin: 16px auto 0;
+}
+
+.navigation {
+    width: 100%;
+}
+
+.navigation-list {
+    color:#f2e9d0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.navigation-list li a {
+    cursor: pointer;
+}
+
+#mission-link, #north-link, #houses-link, #contacts-link {
+    color:#f2e9d0;
+    text-decoration: none;
+}
+
+.burger {
+    cursor: pointer;
+    display: none;
+}
+
+.burger div {
+    background-color:rgb(226, 226, 226);
+    height: 3px;
+    margin: 5px;
+    text-align: right;
+    transition: all 0.3s ease;
+    width: 25px;
+}
+
+@media screen and (max-width: 426px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .header {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .header h1 {
+        font-size: 1.25rem;
+        margin: 16px 10px;
+        width: 100%;
+    }
+
+    .navigation {
+        width: 15%;
+    }
+
+    .navigation-list {
+        align-items: center;
+        background-color: #804d3b;
+        display: flex;
+        flex-direction: column;
+        height: 92vh;
+        position: absolute;
+        right: 0px;
+        top: 8vh;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        width: 50%;
+        z-index: 1;
+    }
+
+    .navigation-list li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .header h1 {
+        font-size: 1rem;
+    }
+}
+
+.nav-active {
+    transform: translate(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+/* .empty {
+    background-color: #f9f5ce;
+    height: 20px;
+    width: 100%;
+} */
+
+.mission {
+    align-items: center;
+    background-image: url('./images/mission/marcus-cramer-photo.jpg'); /*('./images/mission/mountain-house.jpg')*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+}
+
+.mission-title {
+    background-color: #f9f5ce; /*#804d3b;*/
+    color: #dd7646; /*#e0ab5b;*/
+    font-size: 1.5rem;
+    margin: 0;
+    opacity: 0.55;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.mission-paragraph-one, .mission-paragraph-two {
+    background: #f9f5ce; /*linear-gradient(to right, rgb(53, 53, 53), #e4e1e0) ;*/
+    border-radius: 8px;
+    color: #dd7646; /*#a1583e;*/ /*#f0ece2;  */
+    font-size: 1.25rem;
+    margin: 0;
+    opacity: 0.65;
+    padding: 15px 0;
+    text-align: center;
+    text-shadow: 1px 1px 0 #0e2431;
+    width: 50%;
+}
+
+.mission-paragraph-two {
+    margin: 0 0 20px;
+}
+
+@media screen and (max-width: 426px) {
+    .mission-title {
+        font-size: 1.25rem;
+    }
+
+    .mission-paragraph-one, .mission-paragraph-two {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .mission-title {
+        font-size: 1rem;
+    }
+}
+
+.north {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.north-inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.north-inner-title {
+    background-color: #804d3b;
+    color:#f9f5ce;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.north-properties {
+    /* align-items: center; */
+    background-color: #f9f5ce;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.north-common-property {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.north-common-property p {
+    color: #804d3b;
+    margin: 10px 0;
+}
+
+.north-common-property p:hover {
+    cursor: pointer;
+}
+
+.north-property-one, .north-property-three {
+    text-align: center;
+    width: 30%;
+}
+
+.north-property-two, .north-property-four {
+    text-align: center;
+    width: 30%;
+}
+
+.north-common-property__img {
+    margin: 0;
+    max-height: 300px;
+    width: 90%;
+}
+
+.north-more-info {
+    display: none;
+    margin: 0;
+}
+
+.display-paragraph {
+    background: cornsilk;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 426px) {
+    .north-inner-title {
+        font-size: 1.25rem;
+    }
+    
+    .north-properties {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .north-property-one, .north-property-three {
+        width: 70%;
+    }
+    
+    .north-property-two, .north-property-four {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    .north-inner-title {
+        font-size: 1rem;
+    }
+}
+
+.houses {
+    width: 100%;
+}
+
+.houses-title {
+    background-color: #804d3b;
+    color:#f9f5ce;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.houses-wrapper {
+    /* align-items: center; */
+    background-color: #f9f5ce;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.houses-itself {
+    width: 30%;
+}
+
+.houses-itself-img {
+    margin: 0 0 10px;
+    max-width: 100%;
+}
+
+.houses-itself h3 {
+    color: #804d3b;
+    cursor: pointer;
+    margin: 0;
+    text-align: center;
+}
+
+.house-more-info {
+    display: none;
+}
+
+.display-paragraph-house {
+    background: cornsilk;
+    border: none;
+    border-radius: 10px;
+    color: #804d3b;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 426px) {
+    .houses-title {
+        font-size: 1.25rem;
+    }
+    
+    .houses-wrapper {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .houses-itself {
+        width: 75%;
+    }
+
+    .house-one, .house-two {
+        margin: 0 0 10px;
+    }
+
+}
+
+@media screen and (max-width: 426px) {
+    .houses-title {
+        font-size: 1rem;
+    }
+}
+
+.footer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.contacts {
+    align-items: center;
+    background-color: #f9f5ce;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.contacts-title{
+    background-color: #804d3b;
+    color:#f9f5ce;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.email, .phone, .office {
+    color: #804d3b;
+}
+
+.thanks {
+    background-color: #804d3b;
+    color: #f9f5ce;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.thanks-title {
+    font-size: 0.85rem;
+    margin: 5px 0 10px 10px;
+}
+
+.thanks-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.thanks-paragraphs {
+    font-size: 0.75rem;
+    margin: 0 0 5px;
+}
+
+.thanks-paragraphs a {
+    color: #f9f5ce;
+}
+
+@media screen and (max-width: 426px) {
+    .thanks {
+        align-items: center;
+    }
+}
