@@ -26,6 +26,7 @@ body {
     color:#f2e9d0;
     display: flex;
     flex-direction: row;
+    font-size: 1.25rem;
     justify-content: space-around;
     list-style: none;
     padding: 0;
@@ -63,10 +64,12 @@ body {
     .header {
         flex-direction: row;
         justify-content: space-around;
+        text-align: center;
     }
     
     .header h1 {
-        font-size: 1.25rem;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
         margin: 16px 10px;
         width: 100%;
     }
@@ -80,6 +83,7 @@ body {
         background-color: #804d3b;
         display: flex;
         flex-direction: column;
+        font-size: 1rem;
         height: 92vh;
         position: absolute;
         right: 0px;
@@ -101,7 +105,7 @@ body {
 
 @media screen and (max-width: 321px) {
     .header h1 {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
@@ -236,6 +240,7 @@ body {
 
 .north-common-property p {
     color: #804d3b;
+    font-size: 1.25rem;
     margin: 10px 0;
 }
 
@@ -282,6 +287,10 @@ body {
     .north-properties {
         align-items: center;
         flex-direction: column;
+    }
+
+    .north-common-property p {
+        font-size: 0.8rem;
     }
 
     .north-property-one, .north-property-three {
