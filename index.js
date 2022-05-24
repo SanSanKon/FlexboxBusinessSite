@@ -1,15 +1,16 @@
 //Burger menu
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.navigation-list');
+const navLinks = document.querySelectorAll('.navigation-list li');
 
 const navSlide = () => {
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.navigation-list');
-    const navLinks = document.querySelectorAll('.navigation-list li');
-
    
     burger.addEventListener('click', ()=> {
+        //Burger Animation
+        burger.classList.toggle('toggle');
+
          //Toggle Nav
         nav.classList.toggle('nav-active');
-    
 
     //Animate Links
         navLinks.forEach((link, index) => {
@@ -19,12 +20,31 @@ const navSlide = () => {
                 link.style.animation = link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
             }
         });
-        //Burger Animation
-        burger.classList.toggle('toggle');
     });
 }
 
 navSlide();
+
+    navLinks.forEach(link => link.addEventListener('click', ()=> {
+        burger.classList.toggle('toggle');
+        nav.classList.toggle('nav-active');
+        navLinks.forEach((link, index) => {
+            if(link.style.animation) {
+                link.style.animation = ''
+            } else {
+                link.style.animation = link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+            }
+        });
+    }));
+
+// document.onclick = (e) => {
+//     if(e.target !== nav && e.target !== burger) {
+//         nav.classList.remove('nav-active');
+//         burger.classList.remove('toggle');
+//     }
+// }
+
+
 
 //Event handler for powerful property
 
