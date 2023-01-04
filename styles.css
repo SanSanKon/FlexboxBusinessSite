@@ -471,3 +471,25 @@ body {
         align-items: center;
     }
 }
+
+#upButton {
+    background-color: #f4e78c;
+    border: 1px solid #804d3b;
+    border-radius: 10px;
+    bottom: 20px;
+    color: #804d3b;
+    cursor: pointer;
+    display: none;
+    font-size: 18px;
+    outline: none;
+    padding: 15px;
+    position: fixed;
+    right: 30px;
+    z-index: 2;
+}
+
+#upButton:hover {
+    background-color: #804d3b;
+    border: 1px solid white;
+    color: white;
+}
